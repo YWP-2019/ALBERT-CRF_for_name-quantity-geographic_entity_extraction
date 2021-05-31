@@ -62,9 +62,9 @@ def load_data(filename):
 
 
 # 标注数据
-train_data = load_data('./data/elephant_60%.train')
-valid_data = load_data('./data/elephant_20%.dev')
-test_data = load_data('./data/elephant_20%.test')
+train_data = load_data('…….train')
+valid_data = load_data('…….dev')
+test_data = load_data('…….test')
 
 # 建立分词器
 tokenizer = Tokenizer(dict_path, do_lower_case=True)
@@ -193,7 +193,7 @@ class Evaluate(keras.callbacks.Callback):
         # 保存最优
         if f1 >= self.best_val_f1:
             self.best_val_f1 = f1
-            model.save_weights('20210531_yuanshi_best_model2.weights')
+            model.save_weights('…….weights')
         print(
             'valid:  f1: %.5f, precision: %.5f, recall: %.5f, best f1: %.5f\n' %
             (f1, precision, recall, self.best_val_f1)
@@ -219,4 +219,4 @@ if __name__ == '__main__':
 
 else:
 
-    model.load_weights('20210531_yuanshi_best_model.weights')
+    model.load_weights('…….weights')
